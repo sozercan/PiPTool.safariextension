@@ -179,13 +179,11 @@
             {
                 name: 'netflix',
                 testPattern: /(netflix\.com|www\.netflix\.com)/,
-
                 customLoadEvent: {
                     name: 'load',
                     method: netflixObserverTrigger,
                     loaded: false
                 },
-
                 elementType: 'span',
                 videoSelector: 'video',
                 buttonClassList: 'netflix-pip',
@@ -194,6 +192,17 @@
                     netflixContainer: '#appMountPoint',
                     videoClassObserver: 'player-menu'
                 }
+            },            
+            {
+                name: 'channel9',
+                testPattern: /(channel9\.msdn\.com)/,
+                customLoadEvent: null,
+                elementType: 'button',
+                videoSelector: 'video',
+                buttonClassList: 'pip-button control',
+                videoParentClass: '.playerGoesHere',
+                controlsWrapperClass: '.controls',
+                customClasses: null
             }
         ];
         
